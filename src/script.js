@@ -1,3 +1,4 @@
+// Navbar toggle functionality
 const navbarToggler = document.querySelector(".navbar-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
 
