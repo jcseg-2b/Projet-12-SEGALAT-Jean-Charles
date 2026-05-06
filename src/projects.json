@@ -2,41 +2,41 @@
   {
     "id": 1,
     "title": "Kasa",
-    "description": "Initiation au framework React avec la creation d'une application de location immobiliere. Utilisation de composants, de props et de React Router.",
-    "image": "assets/projects/kasa.png",
-    "technologies": ["React", "React router"],
+    "description": "Initiation au framework React avec la création d'une application de location immobiliere. Utilisation de composants, de props et React Router.",
+    "image": "assets/projects/kasa.webp",
+    "category": ["React", "React router"],
     "github": "https://github.com/jcseg-2b/Projet-7-SEGALAT-Jean-Charles-.git"
   },
   {
     "id": 2,
     "title": "Sophie Bluel",
     "description": "Création d'une page web dynamique pour une architecte d'intérieur avec gestion de modale et appels API.",
-    "image": "assets/projets/sophie-bluel.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
+    "image": "assets/projects/sophiebluel.webp",
+    "category": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/jcseg-2b/jcseg-2b-Projet-6-SEGALAT-Jean-Charles.git"
   },
   {
     "id": 3,
     "title": "OhmyFood",
-    "description": "Integration d'une maquette en mobile-first pour un site de commande de repas. Utilisation de Sass et d'animations CSS avancées.",
-    "image": "assets/projects/ohmyfood.png",
-    "technologies": ["HTML", "Animation", "Sass"],
+    "description": "Intégration de maquette en mobile-first pour un site de commande de repas en ligne. Utilisation de Sass et d'animations CSS avancées.",
+    "image": "assets/projects/ohmyfood.webp",
+    "category": ["HTML", "Animation", "Sass"],
     "github": "https://github.com/jcseg-2b/Projet-4-SEGALAT-Jean-Charles.git"
   },
   {
     "id": 4,
     "title": "Nica Carducci",
-    "description": "Optimisation du SEO, des performances et de l'accessibilite du site d'une photographe.",
-    "image": "assets/projects/grimoire.png",
-    "technologies": ["SEO", "Lighthouse", "Accessibilité"],
+    "description": "Optimisation des performances, du SEO et de l'accessibilite du site d'une photographe.",
+    "image": "assets/projects/ninacarducci.webp",
+    "category": ["SEO", "Lighthouse", "Accessibilité"],
     "github": ""
   },
   {
     "id": 5,
     "title": "ArgentBank",
-    "description": "Implementation du front-end d'une application bancaire avec React et Redux pour la gestion de l'etat global de l'application..",
-    "image": "assets/projects/grimoire.png",
-    "technologies": ["react", "Redux", "API REST", "swagger"],
+    "description": "Implémentation du front-end d'une application bancaire avec React et Redux pour la gestion de l'etat global de l'application.",
+    "image": "assets/projects/argentbank.webp",
+    "category": ["React", "Redux", "API REST", "Swagger"],
     "github": "https://github.com/jcseg-2b/Projet-10-SEGALAT_Jean-Charles.git"
   }
 ]

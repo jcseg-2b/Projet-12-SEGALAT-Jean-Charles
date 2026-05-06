@@ -10,7 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link rel="stylesheet" href="src/styles/header.css" />
+    <link rel="stylesheet" href="src/styles/navbar.css" />
+    <link rel="stylesheet" href="src/styles/about.css" />
     <script src="src/script.js" defer></script>
   </head>
   <body>
@@ -45,12 +48,8 @@
     <section id="about" class="about">
       <div class="about-content">
         <h2 class="about-title">À propos</h2>
-        <src
-          img
-          src="src/images/profile.jpg"
-          alt="Photo de profil"
-          class="about-image"
-        />
+
+        <img src="" alt="Photo de profil" class="about-image-wrapper" />
         <p class="about-text-1">
           L'art de l'interface, la rigueur du code. Actuellement en phase finale
           de ma formation de Développeur Informatique avec OpenClassrooms, je
@@ -68,5 +67,11 @@
         </p>
       </div>
     </section>
+    <section id="projets" class="projects">
+      <div class="projects-content">
+        <h2 class="projects-title">Mes projets</h2>
+        <div class="filter-btn" id="filter-btn"></div>
+        <div class="gallery-item" id="gallery-item"></div>
+      </div>
   </body>
 </html>
