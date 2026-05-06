@@ -19,6 +19,7 @@ function renderGallery(projects) {
       <img src="${project.image}" alt="${project.title}" />
       <h3>${project.title}</h3>
       <p>${project.description}</p>
+      <div class="border-card"></div>
       <ul>
         ${project.category.map((cat) => `<li>${cat}</li>`).join("")}
       </ul>
