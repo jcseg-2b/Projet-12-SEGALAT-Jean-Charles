@@ -7,6 +7,8 @@ navbarToggler.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
 
+// Gallery rendering and filtering
+
 function renderGallery(projects) {
   const gallery = document.getElementById("gallery-item");
   gallery.innerHTML = "";

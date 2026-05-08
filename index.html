@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="src/styles/navbar.css" />
     <link rel="stylesheet" href="src/styles/about.css" />
     <link rel="stylesheet" href="src/styles/project.css" />
+    <link rel="stylesheet" href="src/styles/skills.css" />
     <script src="src/script.js" defer></script>
   </head>
   <body>
@@ -51,7 +52,7 @@
         <h2 class="about-title">À propos</h2>
 
         <div class="about-image-wrapper">
-  <img src="assets/projects/argentbank.webp" alt="Photo de profil" class="about-image" />
+  <img src="assets/jc-segalat.webp" alt="Photo de profil" class="about-image" />
 </div>
 
         <p class="about-text-1">
@@ -74,10 +75,78 @@
     <section id="projets" class="projects">
       <div class="projects-content">
         <h2 class="projects-title">Mes projets</h2>
-        <div class="border-project"></div>
+        <div class="border"></div>
         <div class="filter-btn" id="filter-btn"></div>
         <div class="gallery-item" id="gallery-item"></div>
         </div>
       </div>
+      <section id="skills" class="skills">
+        <h2 class="skills-title">Mes compétences</h2>
+        
+        <details class="skill-category">
+          <summary class="skill-category-title">Front-end</summary>
+          <div class="icone-grid">
+            <a href="https://developer.mozilla.org/fr/docs/web/HTML" target="_blank" rel="noopener"><img src="assets/icons/html5.svg" alt="HTML5" />
+            <span>HTML5</span></a>
+            <a href="https://developer.mozilla.org/fr/docs/web/CSS" target="_blank" rel="noopener"><img src="assets/icons/css.svg" alt="CSS3" />
+              <span>CSS3</span></a>
+            <a href="https://developer.mozilla.org/fr/docs/web/JavaScript" target="_blank" rel="noopener"><img src="assets/icons/javascript.svg" alt="JavaScript" />
+              <span>JavaScript</span></a>
+            <a href="https://react.dev/" target="_blank" rel="noopener"><img src="assets/icons/react.svg" alt="React" />
+              <span>React</span></a>
+            <a href="https://sass-lang.com/" target="_blank" rel="noopener"><img src="assets/icons/sass.svg" alt="Sass" />
+              <span>Sass</span></a>
+            <a href="https://redux.js.org/" target="_blank" rel="noopener"><img src="assets/icons/redux.svg" alt="Redux" />
+              <span>Redux</span></a>
+          </div>
+        </details>
+        <details class="skill-category">
+          <summary class="skill-category-title">Performance</summary>
+          <div class="icone-grid">
+            <a href="https://developer.mozilla.org/fr/docs/web/HTML" target="_blank" rel="noopener"><img src="assets/icons/lighthouse.svg" alt="Lighthouse" />
+            <span>Lighthouse</span></a>
+            <a href="https://developer.mozilla.org/fr/docs/web/CSS" target="_blank" rel="noopener"><img src="assets/icons/seo.svg" alt="SEO" />
+            <span>SEO</span></a>  
+            <a href="https://developer.mozilla.org/fr/docs/web/JavaScript" target="_blank" rel="noopener"><img src="assets/icons/greencode.svg" alt="Bonne pratiques" />
+            <span>Bonne pratiques</span></a>
+          </div>
+        </details>
+        <details class="skill-category">
+          <summary class="skill-category-title">DevTools/Workflow</summary>
+          <div class="icone-grid">
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="GitHub" />
+            <span>GitHub</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/git.svg" alt="GIT" />
+            <span>GIT</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/vscode.svg" alt="VScode" />
+            <span>VScode</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/htmx.svg" alt="Terminal" />
+            <span>Terminal</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/figma.svg" alt="Figma" />
+            <span>Figma</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/vite.svg" alt="Vite" />
+            <span>Vite</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/npm.svg" alt="Npm" />
+            <span>Npm</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/notion.svg" alt="Notion" />
+            <span>Notion</span></a>
+            <a href="" target="_blank" rel="noopener"><img src="assets/icons/feedly.svg" alt="Feedly" />
+            <span>Feedly</span></a>
+          </div>
+        </details>
+      </section>
+      <section id="contact" class="contact">
+        <h2 class="contact-title">Contact</h2>
+        <p class="contact-text">N'hésitez pas à me contacter pour toute question ou collaboration !</p>
+        <div class="contact-form">  
+          <label for="name">Votre nom</label>
+          <input id="name" type="text" name="name" placeholder="votre nom" required />
+          <label for="email">Votre adresse e-mail</label>
+          <input id="email" type="email" name="email" placeholder="votre adresse e-mail" required />
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message"  placeholder="votre message" required></textarea>
+          <button type="submit">Envoyer</button>
+        </div>
+      </section>
   </body>
 </html>
