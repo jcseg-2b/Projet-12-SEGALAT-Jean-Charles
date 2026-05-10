@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 60px 20px;
+  align-items: center;
+  gap: 50px;
+
+  .link {
+    display: flex;
+    gap: 60px;
+  }
+  .link a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .cv {
+    display: flex;
+    margin: auto;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+}

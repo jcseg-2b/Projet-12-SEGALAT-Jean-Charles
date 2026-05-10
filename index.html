@@ -17,13 +17,14 @@
     <link rel="stylesheet" href="src/styles/project.css" />
     <link rel="stylesheet" href="src/styles/skills.css" />
     <link rel="stylesheet" href="src/styles/contact.css" />
+    <link rel="stylesheet" href="src/styles/footer.css" />
     <script src="src/script.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
       <div class="navbar-container">
         <a href="index.html" class="navbar-logo">Portfolio</a>
-        <button class="navbar-toggle">
+        <button class="navbar-toggle" name="navbar-button" aria-label="Toggle navigation">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -48,6 +49,7 @@
         </p>
       </div>
     </header>
+    <main>
     <section id="about" class="about">
       <div class="about-content">
         <h2 class="title">À propos</h2>
@@ -82,6 +84,7 @@
         <div class="gallery-item" id="gallery-item"></div>
         </div>
       </div>
+      </section>
       <section id="skills" class="skills">
         <h2 class="title">Mes compétences</h2>
         
@@ -147,19 +150,22 @@
           <input id="email" type="email" name="email" placeholder="votre adresse e-mail" required />
           <label for="message">Votre message</label>
           <textarea id="message" name="message"  placeholder="votre message" required></textarea>
-          <button type="submit">Envoyer</button>
+          <button  type="submit">Envoyer</button>
         </form>
       </section>
-      <section class="footer">
+    </main>
+      <footer class="footer">
         <div class="link">
-         <a href="https://www.linkedin.com/in/jean-charles-segalat-3aaa12378/" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="Linkedin" />
+         <a href="https://www.linkedin.com/in/jean-charles-segalat-3aaa12378" target="_blank" rel="noopener"><img src="assets/icons/linkedin.svg" alt="Linkedin" />
             <span>Linkedin</span></a>
             <a href="https://github.com/jcseg-2b?tab=repositories" target="_blank" rel="noopener"><img src="assets/icons/github.svg" alt="GitHub" />
             <span>GitHub</span></a>
         </div>
+        <div class="cv">
         <a href="assets/cv-jc-segalat.pdf" download="Jean-Charles_Segalat_CV.pdf" target="_blank" rel="noopener">
-          <span> Télécharger mon CV</span>
+          <span> Télécharger mon CV !</span>
         </a>
-      </section>
+        </div>
+      </footer>
   </body>
 </html>
