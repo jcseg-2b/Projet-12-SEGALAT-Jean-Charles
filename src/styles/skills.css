@@ -1,77 +1,78 @@
+/* Skills */
 .skills {
   padding: 50px 15px 30px 15px;
-}
 
-.skills-title {
-  font-size: 24px;
-  margin-bottom: 30px;
-}
+  & > .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
 
-.skill-category {
-  border-top: 1px solid black;
-}
+  .skill-category {
+    border-top: 1px solid black;
 
-.skill-category:last-of-type {
-  border-bottom: 1px solid black;
-}
+    &:last-of-type {
+      border-bottom: 1px solid black;
+    }
 
-.skill-category-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  list-style: none;
-  user-select: none;
-}
+    & > .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
 
-.skill-category-title::-webkit-details-marker {
-  display: none;
-}
+      &::-webkit-details-marker {
+        display: none;
+      }
 
-.skill-category-title::after {
-  content: "+";
-  font-size: 22px;
-  font-weight: 300;
-}
+      &::after {
+        content: "+";
+        font-size: 22px;
+        font-weight: 300;
+      }
+    }
 
-.skill-category[open] > .skill-category-title::after {
-  content: "×";
-}
+    &[open] > .title::after {
+      content: "×";
+    }
 
-.icone-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-  gap: 30px;
-  padding: 8px 0 30px 0;
-}
+    .icone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      gap: 30px;
+      padding: 8px 0 30px 0;
 
-.icone-grid a {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-decoration: none;
-  color: black;
-  font-size: 11px;
-  text-transform: uppercase;
-  transition: opacity 0.25s ease;
-}
+      a {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-decoration: none;
+        color: black;
+        font-size: 11px;
+        text-transform: uppercase;
+        transition: opacity 0.25s ease;
 
-.icone-grid a:hover {
-  opacity: 0.4;
-}
+        &:hover {
+          opacity: 0.4;
 
-.icone-grid a img {
-  width: 40px;
-  object-fit: contain;
-  filter: grayscale(1);
-  transition: filter 0.25s ease;
-}
+          img {
+            filter: grayscale(0);
+          }
+        }
 
-.icone-grid a:hover img {
-  filter: grayscale(0);
+        img {
+          width: 40px;
+          object-fit: contain;
+          filter: grayscale(1);
+          transition: filter 0.25s ease;
+        }
+      }
+    }
+  }
 }
