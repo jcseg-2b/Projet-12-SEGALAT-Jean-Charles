@@ -7,7 +7,7 @@ navbarToggler.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
 
-// Gallery rendering and filtering
+// Rendu visuel de mes projets et des filtres
 
 function renderGallery(projects) {
   const gallery = document.getElementById("gallery-item");
@@ -17,15 +17,30 @@ function renderGallery(projects) {
     const card = document.createElement("div");
     card.classList.add("card");
 
-    card.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" />
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <div class="border-card"></div>
-      <ul>
-        ${project.category.map((cat) => `<li>${cat}</li>`).join("")}
-      </ul>
-    `;
+    const img = document.createElement("img");
+    img.src = project.image;
+    img.alt = project.title;
+    card.appendChild(img);
+
+    const title = document.createElement("h3");
+    title.textContent = project.title;
+    card.appendChild(title);
+
+    const description = document.createElement("p");
+    description.textContent = project.description;
+    card.appendChild(description);
+
+    const border = document.createElement("div");
+    border.classList.add("border-card");
+    card.appendChild(border);
+
+    const categoryList = document.createElement("ul");
+    project.category.forEach((cat) => {
+      const li = document.createElement("li");
+      li.textContent = cat;
+      categoryList.appendChild(li);
+    });
+    card.appendChild(categoryList);
 
     gallery.appendChild(card);
   });
@@ -71,4 +86,50 @@ fetch("src/projects.json")
   .then((projects) => {
     renderGallery(projects);
     renderFilters(projects);
+  });
+
+// Rendu visuel de mes compétences
+
+function renderSkills(skills) {
+  const skillsContainer = document.getElementById("skills-content");
+  skillsContainer.innerHTML = "";
+
+  skills.forEach((skill) => {
+    const skilldetails = document.createElement("details");
+    skilldetails.classList.add("skill-category");
+    skillsContainer.appendChild(skilldetails);
+
+    const skillsummary = document.createElement("summary");
+    skillsummary.textContent = skill.category;
+    skillsummary.classList.add("title");
+    skilldetails.appendChild(skillsummary);
+
+    const skillsGrid = document.createElement("div");
+    skillsGrid.classList.add("icone-grid");
+    skilldetails.appendChild(skillsGrid);
+
+    skill.skills.forEach((skill) => {
+      const itemLink = document.createElement("a");
+      itemLink.href = skill.url;
+      itemLink.target = "_blank";
+      itemLink.rel = "noopener noreferrer";
+
+      const skillIcon = document.createElement("img");
+      skillIcon.src = skill.icon;
+      skillIcon.alt = skill.alt;
+      itemLink.appendChild(skillIcon);
+
+      const skillName = document.createElement("span");
+      skillName.textContent = skill.name;
+      itemLink.appendChild(skillName);
+
+      skillsGrid.appendChild(itemLink);
+    });
+  });
+}
+
+fetch("src/skills.json")
+  .then((response) => response.json())
+  .then((data) => {
+    renderSkills(data);
   });

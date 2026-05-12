@@ -88,7 +88,7 @@
       },
       {
         "name": "Terminal",
-        "icon": "assets/icons/html.svg",
+        "icon": "assets/icons/htmx.svg",
         "url": "https://learn.microsoft.com/fr-fr/windows/terminal/samples",
         "alt": "Logo Terminal"
       },
