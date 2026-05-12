@@ -133,3 +133,66 @@ fetch("src/skills.json")
   .then((data) => {
     renderSkills(data);
   });
+
+// Rendu visuel de mon parcours
+
+function renderExperiences(experiences) {
+  const CoursesExperiences = document.getElementById("experiences");
+  CoursesExperiences.innerHTML = "";
+
+  experiences.forEach((exp) => {
+    const expCard = document.createElement("div");
+    expCard.classList.add("exp-card");
+    CoursesExperiences.appendChild(expCard);
+
+    const expPoste = document.createElement("h3");
+    expPoste.textContent = exp.poste;
+    expCard.appendChild(expPoste);
+
+    const expEntreprise = document.createElement("p");
+    expEntreprise.textContent = exp.entreprise;
+    expCard.appendChild(expEntreprise);
+
+    const expDates = document.createElement("p");
+    expDates.textContent = exp.dates;
+    expCard.appendChild(expDates);
+
+    const expDescription = document.createElement("ul");
+    exp.description.forEach((des) => {
+      const li = document.createElement("li");
+      li.textContent = des;
+      expDescription.appendChild(li);
+    });
+    expCard.appendChild(expDescription);
+  });
+}
+
+function renderDiplomes(diplomes) {
+  const CourseDiplomes = document.getElementById("diplomas");
+  CourseDiplomes.innerHTML = "";
+
+  diplomes.forEach((dip) => {
+    const dipCard = document.createElement("div");
+    dipCard.classList.add("dip-card");
+    CourseDiplomes.appendChild(dipCard);
+
+    const dipDiplomes = document.createElement("h3");
+    dipDiplomes.textContent = dip.diplome;
+    dipCard.appendChild(dipDiplomes);
+
+    const dipEtablissement = document.createElement("p");
+    dipEtablissement.textContent = dip.etablissement;
+    dipCard.appendChild(dipEtablissement);
+
+    const dipDates = document.createElement("p");
+    dipDates.textContent = dip.annee;
+    dipCard.appendChild(dipDates);
+  });
+}
+
+fetch("src/courses.json")
+  .then((response) => response.json())
+  .then((data) => {
+    renderDiplomes(data.diplomes);
+    renderExperiences(data.experiences);
+  });
