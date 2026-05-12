@@ -1,0 +1,74 @@
+{
+  "experiences": [
+    {
+      "poste": "Agent de production/Cariste",
+      "entreprise": "Greif",
+      "dates": "Juillet 2024 - Juillet 2025",
+      "description": [
+        "Chargement et déchargement de camions",
+        "Conduite de différents types de chariots élévateurs",
+        "Surveillances des lignes de production",
+        "Pose de couvercles, colliers et joints sur les fûts",
+        "Préparation des fûts plastique pour Coca Cola"
+      ]
+    },
+    {
+      "poste": "Conseiller de vente",
+      "entreprise": "Bricomarché",
+      "dates": "Avril 2024 - Juin 2024",
+      "description": [
+        "Découpe de bois",
+        "Découpe de verre",
+        "Réception des marchandises",
+        "Contrôle des marchandises",
+        "Passage de commande informatique",
+        "Aide au chargement des clients"
+      ]
+    },
+    {
+      "poste": "Conseiller de vente",
+      "entreprise": "Weldom",
+      "dates": "Aout 2022 - Avril 2024",
+      "description": [
+        "Approvisionnement des rayons",
+        "Conseil clients",
+        "Découpe de bois et de verre",
+        "Commande informatique pour approvisionnement des rayons",
+        "Aide au chargement des clients"
+      ]
+    },
+    {
+      "poste": "Agent polyvalent intérimaire",
+      "entreprise": "Randstad, Adecco",
+      "dates": "2020 - 2022",
+      "description": [
+        "Caves coopératives: Nettoyage des racks, aide du personnel, réorganisation des zones non conformes",
+        "Poppies Bakeries: Préparation des donuts, mise en boîte et nettoyage de la ligne de production",
+        "Owens Corning: Préparation de bobines de fibre de verre"
+      ]
+    }
+  ],
+
+  "diplomes": [
+    {
+      "diplome": "Cariste 1, 3 et 5",
+      "etablissement": "BE2A, pujault",
+      "annee": 2021
+    },
+    {
+      "diplome": "Baccalauréat professionnel options: Cuisine",
+      "etablissement": "Lycée Marie Curie, Saint Jean du Gard",
+      "annee": 2019
+    },
+    {
+      "diplome": "Brevet d'études professionnelles options: Cuisine",
+      "etablissement": "Lycée Marie Curie, Saint Jean du Gard",
+      "annee": 2018
+    },
+    {
+      "diplome": "Brevet des collèges",
+      "etablissement": "Collège le Bosquet, Bagnols sur Cèze",
+      "annee": 2016
+    }
+  ]
+}
