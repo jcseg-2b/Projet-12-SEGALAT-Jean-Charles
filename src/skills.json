@@ -1,0 +1,127 @@
+[
+  {
+    "category": "Front-end",
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "assets/icons/html5.svg",
+        "url": "https://developer.mozilla.org/fr/docs/web/HTML",
+        "alt": "Logo HTML5"
+      },
+      {
+        "name": "CSS3",
+        "icon": "assets/icons/css.svg",
+        "url": "https://developer.mozilla.org/fr/docs/web/CSS",
+        "alt": "Logo CSS3"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "assets/icons/javascript.svg",
+        "url": "https://developer.mozilla.org/fr/docs/web/JavaScript",
+        "alt": "Logo JavaScript"
+      },
+      {
+        "name": "React",
+        "icon": "assets/icons/react.svg",
+        "url": "https://react.dev/",
+        "alt": "Logo React"
+      },
+      {
+        "name": "Sass",
+        "icon": "assets/icons/sass.svg",
+        "url": "https://sass-lang.com/",
+        "alt": "Logo Sass"
+      },
+      {
+        "name": "Redux",
+        "icon": "assets/icons/redux.svg",
+        "url": "https://redux.js.org/",
+        "alt": "Logo Redux"
+      }
+    ]
+  },
+
+  {
+    "category": "Performance",
+    "skills": [
+      {
+        "name": "Lighthouse",
+        "icon": "assets/icons/lighthouse.svg",
+        "url": "https://developer.chrome.com/docs/lighthouse/overview/",
+        "alt": "Logo Lighthouse"
+      },
+      {
+        "name": "SEO",
+        "icon": "assets/icons/seo.svg",
+        "url": "https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr#:~:text=Le%20SEO%20(Search%20Engine%20Optimization,via%20un%20moteur%20de%20recherche.",
+        "alt": "Logo SEO"
+      },
+      {
+        "name": "Bonnes pratiques",
+        "icon": "assets/icons/greencode.svg",
+        "url": "https://developer.mozilla.org/fr/docs/Web/Performance",
+        "alt": "Logo Bonnes pratiques"
+      }
+    ]
+  },
+
+  {
+    "category": "DevTools/Workflow",
+    "skills": [
+      {
+        "name": "GitHub",
+        "icon": "assets/icons/github.svg",
+        "url": "https://github.com/",
+        "alt": "Logo GitHub"
+      },
+      {
+        "name": "Git",
+        "icon": "assets/icons/git.svg",
+        "url": "https://git-scm.com/",
+        "alt": "Logo Git"
+      },
+      {
+        "name": "Visual Studio Code",
+        "icon": "assets/icons/vscode.svg",
+        "url": "https://code.visualstudio.com/",
+        "alt": "Logo Visual Studio Code"
+      },
+      {
+        "name": "Terminal",
+        "icon": "assets/icons/html.svg",
+        "url": "https://learn.microsoft.com/fr-fr/windows/terminal/samples",
+        "alt": "Logo Terminal"
+      },
+      {
+        "name": "Figma",
+        "icon": "assets/icons/figma.svg",
+        "url": "https://figma.com/",
+        "alt": "Logo Figma"
+      },
+      {
+        "name": "Vite",
+        "icon": "assets/icons/vite.svg",
+        "url": "https://vitejs.dev/",
+        "alt": "Logo Vite"
+      },
+      {
+        "name": "NPM",
+        "icon": "assets/icons/npm.svg",
+        "url": "https://www.npmjs.com/",
+        "alt": "Logo NPM"
+      },
+      {
+        "name": "Notion",
+        "icon": "assets/icons/notion.svg",
+        "url": "https://notion.so/",
+        "alt": "Logo Notion"
+      },
+      {
+        "name": "Feedly",
+        "icon": "assets/icons/feedly.svg",
+        "url": "https://feedly.com/",
+        "alt": "Logo Feedly"
+      }
+    ]
+  }
+]
