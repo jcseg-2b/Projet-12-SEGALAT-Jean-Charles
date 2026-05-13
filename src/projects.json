@@ -5,7 +5,10 @@
     "description": "Initiation au framework React avec la création d'une application de location immobiliere. Utilisation de composants, de props et React Router.",
     "image": "assets/projects/kasa.webp",
     "category": ["React", "React router"],
-    "github": "https://github.com/jcseg-2b/Projet-7-SEGALAT-Jean-Charles-.git"
+    "github": "https://github.com/jcseg-2b/Projet-7-SEGALAT-Jean-Charles-.git",
+    "objectifs": "Créez une application web de location immobilière avec React",
+    "resultats": "Application SPA fonctionnelle avec navigation dynamique entre les annonces via React Router",
+    "perspectives": "Ajouter un système de favoris, une recherche par ville, ou un back-end réel"
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "description": "Création d'une page web dynamique pour une architecte d'intérieur avec gestion de modale et appels API.",
     "image": "assets/projects/sophiebluel.webp",
     "category": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/jcseg-2b/jcseg-2b-Projet-6-SEGALAT-Jean-Charles.git"
+    "github": "https://github.com/jcseg-2b/jcseg-2b-Projet-6-SEGALAT-Jean-Charles.git",
+    "objectifs": "Créez une page web dynamique avec JavaScript",
+    "resultats": "Page dynamique avec modale de connexion, ajout/suppression de projets via l'API",
+    "perspectives": "Améliorer la gestion des erreurs API, ajouter une pagination des projets"
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "description": "Intégration de maquette en mobile-first pour un site de commande de repas en ligne. Utilisation de Sass et d'animations CSS avancées.",
     "image": "assets/projects/ohmyfood.webp",
     "category": ["HTML", "Animation", "Sass"],
-    "github": "https://github.com/jcseg-2b/Projet-4-SEGALAT-Jean-Charles.git"
+    "github": "https://github.com/jcseg-2b/Projet-4-SEGALAT-Jean-Charles.git",
+    "objectifs": "Améliorez l'interface d'un site mobile avec des animations CSS",
+    "resultats": "Site mobile-first livré avec animations CSS avancé au chargement du site et des menus",
+    "perspectives": "Rendre le site interactif avec un vrai système de commande, ajouter un back-end"
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "description": "Optimisation des performances, du SEO et de l'accessibilite du site d'une photographe.",
     "image": "assets/projects/ninacarducci.webp",
     "category": ["SEO", "Lighthouse", "Accessibilité"],
-    "github": ""
+    "github": "",
+    "objectifs": "Optimisez le référencement d'un site de photographe",
+    "resultats": "Score Lighthouse amélioré, temps de chargement réduit et gain en performance",
+    "perspectives": "Mettre en place un lazy loading des images, améliorer l'accessibilité clavier"
   },
   {
     "id": 5,
@@ -37,6 +49,9 @@
     "description": "Implémentation du front-end d'une application bancaire avec React et Redux pour la gestion de l'etat global de l'application.",
     "image": "assets/projects/argentbank.webp",
     "category": ["React", "Redux", "API REST", "Swagger"],
-    "github": "https://github.com/jcseg-2b/Projet-10-SEGALAT_Jean-Charles.git"
+    "github": "https://github.com/jcseg-2b/Projet-10-SEGALAT_Jean-Charles.git",
+    "objectifs": "Implémentez le front-end d'une application bancaire avec React",
+    "resultats": "Front-end connecté à l'API REST avec authentification JWT et gestion d'état Redux",
+    "perspectives": "Finaliser l'édition des transactions, ajouter des tests unitaires"
   }
 ]
