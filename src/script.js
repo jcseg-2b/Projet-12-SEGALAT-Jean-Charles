@@ -7,6 +7,15 @@ navbarToggler.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
 });
 
+// ajout de ma classe visible pour mon parcours
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
 // Rendu visuel de mes projets et des filtres
 
 function renderGallery(projects) {
@@ -164,6 +173,7 @@ function renderExperiences(experiences) {
       expDescription.appendChild(li);
     });
     expCard.appendChild(expDescription);
+    observer.observe(expCard);
   });
 }
 
@@ -187,6 +197,7 @@ function renderDiplomes(diplomes) {
     const dipDates = document.createElement("p");
     dipDates.textContent = dip.annee;
     dipCard.appendChild(dipDates);
+    observer.observe(dipCard);
   });
 }
 
