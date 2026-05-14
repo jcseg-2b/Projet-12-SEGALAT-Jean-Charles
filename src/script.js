@@ -26,22 +26,32 @@ function renderGallery(projects) {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    // Inner (celui qui tourne)
+    const cardInner = document.createElement("div");
+    cardInner.classList.add("card-inner");
+    card.appendChild(cardInner);
+
+    //cardFront
+    const cardFront = document.createElement("div");
+    cardFront.classList.add("card-front");
+    cardInner.appendChild(cardFront);
+
     const img = document.createElement("img");
     img.src = project.image;
     img.alt = project.title;
-    card.appendChild(img);
+    cardFront.appendChild(img);
 
     const title = document.createElement("h3");
     title.textContent = project.title;
-    card.appendChild(title);
+    cardFront.appendChild(title);
 
     const description = document.createElement("p");
     description.textContent = project.description;
-    card.appendChild(description);
+    cardFront.appendChild(description);
 
     const border = document.createElement("div");
     border.classList.add("border-card");
-    card.appendChild(border);
+    cardFront.appendChild(border);
 
     const categoryList = document.createElement("ul");
     project.category.forEach((cat) => {
@@ -49,7 +59,66 @@ function renderGallery(projects) {
       li.textContent = cat;
       categoryList.appendChild(li);
     });
-    card.appendChild(categoryList);
+    cardFront.appendChild(categoryList);
+    // arriere de carte
+    const cardBack = document.createElement("div");
+    cardBack.classList.add("card-back");
+    cardInner.appendChild(cardBack);
+
+    //objectifs
+    const objTitle = document.createElement("h4");
+    objTitle.textContent = "objectifs:";
+    cardBack.appendChild(objTitle);
+
+    const objP = document.createElement("p");
+    objP.textContent = project.objectifs;
+    cardBack.appendChild(objP);
+
+    // stack
+    const stackTitle = document.createElement("h4");
+    stackTitle.textContent = "stack:";
+    cardBack.appendChild(stackTitle);
+
+    const stackP = document.createElement("ul");
+    project.category.forEach((cat) => {
+      const li = document.createElement("li");
+      li.textContent = cat;
+      stackP.appendChild(li);
+    });
+    cardBack.appendChild(stackP);
+
+    // resultats
+    const resultTitle = document.createElement("h4");
+    resultTitle.textContent = "resultats:";
+    cardBack.appendChild(resultTitle);
+
+    const resP = document.createElement("p");
+    resP.textContent = project.resultats;
+    cardBack.appendChild(resP);
+
+    //perspectives
+    const perspectTitle = document.createElement("h4");
+    perspectTitle.textContent = "amélioration:";
+    cardBack.appendChild(perspectTitle);
+
+    const perspP = document.createElement("p");
+    perspP.textContent = project.amelioration;
+    cardBack.appendChild(perspP);
+
+    // gitHub
+    if (project.github) {
+      const link = document.createElement("a");
+      link.href = project.github;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.textContent = "Voir sur gitHub";
+      cardBack.appendChild(link);
+    }
+
+    // filp au clic
+    card.addEventListener("click", () => {
+      cardInner.classList.toggle("flipped");
+    });
 
     gallery.appendChild(card);
   });
