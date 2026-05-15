@@ -83,7 +83,7 @@
     transition: all 0.3s ease;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     backdrop-filter: none;
 
     .navbar-container .navbar-menu {
