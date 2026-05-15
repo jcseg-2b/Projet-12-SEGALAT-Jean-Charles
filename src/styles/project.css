@@ -39,13 +39,12 @@
         }
       }
     }
-
-    .gallery-item {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
   }
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Card (générée par JS) */
@@ -151,4 +150,24 @@
   height: 1px;
   background-color: black;
   margin: 0 auto 15px auto;
+}
+
+@media (min-width: 768px) {
+  .gallery-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
