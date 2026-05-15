@@ -5,16 +5,14 @@
   align-items: flex-start;
   padding-top: 60px;
   padding-left: 2rem;
+}
 
-  .content {
-    .title {
-      padding-bottom: 30px;
-      font-weight: 600;
-    }
+.header .content .title {
+  padding-bottom: 30px;
+  font-weight: 600;
+}
 
-    .text {
-      font-style: italic;
-      padding-bottom: 40px;
-    }
-  }
+.header .content .text {
+  font-style: italic;
+  padding-bottom: 40px;
 }
