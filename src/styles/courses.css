@@ -70,3 +70,33 @@
   font-size: 13px;
   line-height: 1.8;
 }
+
+@media (min-width: 768px) {
+  .course-content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .exp-card ul {
+    font-size: 16px;
+  }
+
+  .exp-card h3 {
+    font-size: 18px;
+  }
+
+  .exp-card p:first-of-type,
+  .dip-card p:first-of-type {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .exp-card p:last-of-type,
+  .dip-card p:last-of-type {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #555;
+  }
+}
