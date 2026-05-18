@@ -97,6 +97,7 @@
 
   .skill-category > .title {
     gap: 30px;
+    font-size: 16px;
   }
 
   .skill-category:last-of-type {

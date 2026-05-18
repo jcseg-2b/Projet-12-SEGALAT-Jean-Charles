@@ -79,6 +79,11 @@
     justify-content: center;
   }
 
+  .experiences-content h2,
+  .diplomas-content h2 {
+    font-size: 16px;
+  }
+
   .exp-card ul {
     font-size: 16px;
   }
