@@ -90,4 +90,16 @@
     justify-content: center;
     gap: 50px;
   }
+
+  .skill-category {
+    border: none;
+  }
+
+  .skill-category > .title {
+    gap: 30px;
+  }
+
+  .skill-category:last-of-type {
+    border: none;
+  }
 }
