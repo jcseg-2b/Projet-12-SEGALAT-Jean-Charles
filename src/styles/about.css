@@ -40,8 +40,8 @@
     transparent 100%
   );
   mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+    linear-gradient(#fff, #fff) content-box,
+    linear-gradient(#fff, #fff);
   mask-composite: exclude;
   animation: rotate-border 2s linear infinite;
 }
