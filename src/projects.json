@@ -38,7 +38,7 @@
     "description": "Optimisation des performances, du SEO et de l'accessibilite du site d'une photographe.",
     "image": "assets/projects/ninacarducci.webp",
     "category": ["SEO", "Lighthouse", "Accessibilité"],
-    "github": "",
+    "github": "https://github.com/jcseg-2b/Projet-8-Segalat-Jean-Charles.git",
     "objectifs": "Optimisez le référencement d'un site de photographe.",
     "resultats": "Score Lighthouse amélioré, temps de chargement réduit et gain en performance.",
     "amelioration": "Mettre en place un lazy loading des images, améliorer l'accessibilité clavier."
