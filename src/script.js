@@ -60,6 +60,7 @@ function renderGallery(projects) {
       categoryList.appendChild(li);
     });
     cardFront.appendChild(categoryList);
+
     // arriere de carte
     const cardBack = document.createElement("div");
     cardBack.classList.add("card-back");
@@ -124,6 +125,7 @@ function renderGallery(projects) {
   });
 }
 
+// creation des filtres pour mes projets
 function renderFilters(projects) {
   const filterContainer = document.getElementById("filter-btn");
   const categories = [
