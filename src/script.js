@@ -38,7 +38,7 @@ function renderGallery(projects) {
 
     const img = document.createElement("img");
     img.src = project.image;
-    img.alt = project.title;
+    img.alt = project.alt;
     cardFront.appendChild(img);
 
     const title = document.createElement("h3");
