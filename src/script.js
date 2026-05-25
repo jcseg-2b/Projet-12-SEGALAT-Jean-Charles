@@ -1,280 +1,175 @@
-// Navbar toggle functionality
-const navbarToggler = document.querySelector(".navbar-toggle");
-const navbarMenu = document.querySelector(".navbar-menu");
-
+const navbarToggler = document.querySelector(".navbar-toggle"),
+  navbarMenu = document.querySelector(".navbar-menu");
 navbarToggler.addEventListener("click", () => {
-  navbarToggler.classList.toggle("active");
-  navbarMenu.classList.toggle("active");
+  (navbarToggler.classList.toggle("active"),
+    navbarMenu.classList.toggle("active"));
 });
-
-// ajout de ma classe visible pour mon parcours
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
+const observer = new IntersectionObserver((e) => {
+  e.forEach((e) => {
+    e.isIntersecting && e.target.classList.add("visible");
   });
 });
-
-// Rendu visuel de mes projets et des filtres
-
-function renderGallery(projects) {
-  const gallery = document.getElementById("gallery-item");
-  gallery.innerHTML = "";
-
-  projects.forEach((project) => {
-    const card = document.createElement("div");
-    card.classList.add("card");
-
-    // Inner (celui qui tourne)
-    const cardInner = document.createElement("div");
-    cardInner.classList.add("card-inner");
-    card.appendChild(cardInner);
-
-    //cardFront
-    const cardFront = document.createElement("div");
-    cardFront.classList.add("card-front");
-    cardInner.appendChild(cardFront);
-
-    const img = document.createElement("img");
-    img.src = project.image;
-    img.alt = project.alt;
-    cardFront.appendChild(img);
-
-    const title = document.createElement("h3");
-    title.textContent = project.title;
-    cardFront.appendChild(title);
-
-    const description = document.createElement("p");
-    description.textContent = project.description;
-    cardFront.appendChild(description);
-
-    const border = document.createElement("div");
-    border.classList.add("border-card");
-    cardFront.appendChild(border);
-
-    const categoryList = document.createElement("ul");
-    project.category.forEach((cat) => {
-      const li = document.createElement("li");
-      li.textContent = cat;
-      categoryList.appendChild(li);
-    });
-    cardFront.appendChild(categoryList);
-
-    // arriere de carte
-    const cardBack = document.createElement("div");
-    cardBack.classList.add("card-back");
-    cardInner.appendChild(cardBack);
-
-    //objectifs
-    const objTitle = document.createElement("h4");
-    objTitle.textContent = "objectifs:";
-    cardBack.appendChild(objTitle);
-
-    const objP = document.createElement("p");
-    objP.textContent = project.objectifs;
-    cardBack.appendChild(objP);
-
-    // stack
-    const stackTitle = document.createElement("h4");
-    stackTitle.textContent = "stack:";
-    cardBack.appendChild(stackTitle);
-
-    const stackP = document.createElement("ul");
-    project.category.forEach((cat) => {
-      const li = document.createElement("li");
-      li.textContent = cat;
-      stackP.appendChild(li);
-    });
-    cardBack.appendChild(stackP);
-
-    // resultats
-    const resultTitle = document.createElement("h4");
-    resultTitle.textContent = "resultats:";
-    cardBack.appendChild(resultTitle);
-
-    const resP = document.createElement("p");
-    resP.textContent = project.resultats;
-    cardBack.appendChild(resP);
-
-    //perspectives
-    const perspectTitle = document.createElement("h4");
-    perspectTitle.textContent = "amélioration:";
-    cardBack.appendChild(perspectTitle);
-
-    const perspP = document.createElement("p");
-    perspP.textContent = project.amelioration;
-    cardBack.appendChild(perspP);
-
-    // gitHub
-    if (project.github) {
-      const link = document.createElement("a");
-      link.href = project.github;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.textContent = "Voir sur gitHub";
-      cardBack.appendChild(link);
-    }
-
-    // filp au clic
-    card.addEventListener("click", () => {
-      cardInner.classList.toggle("flipped");
-    });
-
-    gallery.appendChild(card);
-  });
+function renderGallery(e) {
+  const t = document.getElementById("gallery-item");
+  ((t.innerHTML = ""),
+    e.forEach((e) => {
+      const n = document.createElement("div");
+      n.classList.add("card");
+      const c = document.createElement("div");
+      (c.classList.add("card-inner"), n.appendChild(c));
+      const d = document.createElement("div");
+      (d.classList.add("card-front"), c.appendChild(d));
+      const a = document.createElement("img");
+      ((a.src = e.image), (a.alt = e.alt), d.appendChild(a));
+      const o = document.createElement("h3");
+      ((o.textContent = e.title), d.appendChild(o));
+      const l = document.createElement("p");
+      ((l.textContent = e.description), d.appendChild(l));
+      const r = document.createElement("div");
+      (r.classList.add("border-card"), d.appendChild(r));
+      const s = document.createElement("ul");
+      (e.category.forEach((e) => {
+        const t = document.createElement("li");
+        ((t.textContent = e), s.appendChild(t));
+      }),
+        d.appendChild(s));
+      const i = document.createElement("div");
+      (i.classList.add("card-back"), c.appendChild(i));
+      const m = document.createElement("h4");
+      ((m.textContent = "objectifs:"), i.appendChild(m));
+      const p = document.createElement("p");
+      ((p.textContent = e.objectifs), i.appendChild(p));
+      const u = document.createElement("h4");
+      ((u.textContent = "stack:"), i.appendChild(u));
+      const h = document.createElement("ul");
+      (e.category.forEach((e) => {
+        const t = document.createElement("li");
+        ((t.textContent = e), h.appendChild(t));
+      }),
+        i.appendChild(h));
+      const C = document.createElement("h4");
+      ((C.textContent = "resultats:"), i.appendChild(C));
+      const E = document.createElement("p");
+      ((E.textContent = e.resultats), i.appendChild(E));
+      const g = document.createElement("h4");
+      ((g.textContent = "amélioration:"), i.appendChild(g));
+      const b = document.createElement("p");
+      if (((b.textContent = e.amelioration), i.appendChild(b), e.github)) {
+        const t = document.createElement("a");
+        ((t.href = e.github),
+          (t.target = "_blank"),
+          (t.rel = "noopener"),
+          (t.textContent = "Voir sur gitHub"),
+          i.appendChild(t));
+      }
+      (n.addEventListener("click", () => {
+        c.classList.toggle("flipped");
+      }),
+        t.appendChild(n));
+    }));
 }
-
-// creation des filtres pour mes projets
-function renderFilters(projects) {
-  const filterContainer = document.getElementById("filter-btn");
-  const categories = [
-    { label: "React", filter: (p) => p.category.includes("React") },
-    { label: "JavaScript", filter: (p) => p.category.includes("JavaScript") },
-    {
-      label: "CSS / Sass",
-      filter: (p) =>
-        p.category.some((c) => ["CSS", "Sass", "Animation"].includes(c)),
-    },
-    {
-      label: "SEO / Optimisation",
-      filter: (p) =>
-        p.category.some((c) =>
-          ["SEO", "Lighthouse", "Accessibilité"].includes(c),
-        ),
-    },
-  ];
-
-  const btnAll = document.createElement("button");
-  btnAll.textContent = "Tous";
-  btnAll.addEventListener("click", () => renderGallery(projects));
-  filterContainer.appendChild(btnAll);
-
-  categories.forEach((cat) => {
-    const btn = document.createElement("button");
-    btn.textContent = cat.label;
-    btn.addEventListener("click", () => {
-      const filteredProjects = projects.filter(cat.filter);
-      renderGallery(filteredProjects);
-    });
-    filterContainer.appendChild(btn);
-  });
+function renderFilters(e) {
+  const t = document.getElementById("filter-btn"),
+    n = document.createElement("button");
+  ((n.textContent = "Tous"),
+    n.addEventListener("click", () => renderGallery(e)),
+    t.appendChild(n),
+    [
+      { label: "React", filter: (e) => e.category.includes("React") },
+      { label: "JavaScript", filter: (e) => e.category.includes("JavaScript") },
+      {
+        label: "CSS / Sass",
+        filter: (e) =>
+          e.category.some((e) => ["CSS", "Sass", "Animation"].includes(e)),
+      },
+      {
+        label: "SEO / Optimisation",
+        filter: (e) =>
+          e.category.some((e) =>
+            ["SEO", "Lighthouse", "Accessibilité"].includes(e),
+          ),
+      },
+    ].forEach((n) => {
+      const c = document.createElement("button");
+      ((c.textContent = n.label),
+        c.addEventListener("click", () => {
+          renderGallery(e.filter(n.filter));
+        }),
+        t.appendChild(c));
+    }));
 }
-
-fetch("src/projects.json")
-  .then((response) => response.json())
-  .then((projects) => {
-    renderGallery(projects);
-    renderFilters(projects);
-  });
-
-// Rendu visuel de mes compétences
-
-function renderSkills(skills) {
-  const skillsContainer = document.getElementById("skills-content");
-  skillsContainer.innerHTML = "";
-
-  skills.forEach((skill) => {
-    const skilldetails = document.createElement("details");
-    skilldetails.classList.add("skill-category");
-    skillsContainer.appendChild(skilldetails);
-
-    const skillsummary = document.createElement("summary");
-    skillsummary.textContent = skill.category;
-    skillsummary.classList.add("title");
-    skilldetails.appendChild(skillsummary);
-
-    const skillsGrid = document.createElement("div");
-    skillsGrid.classList.add("icone-grid");
-    skilldetails.appendChild(skillsGrid);
-
-    skill.skills.forEach((skill) => {
-      const itemLink = document.createElement("a");
-      itemLink.href = skill.url;
-      itemLink.target = "_blank";
-      itemLink.rel = "noopener noreferrer";
-
-      const skillIcon = document.createElement("img");
-      skillIcon.src = skill.icon;
-      skillIcon.alt = skill.alt;
-      itemLink.appendChild(skillIcon);
-
-      const skillName = document.createElement("span");
-      skillName.textContent = skill.name;
-      itemLink.appendChild(skillName);
-
-      skillsGrid.appendChild(itemLink);
-    });
-  });
+function renderSkills(e) {
+  const t = document.getElementById("skills-content");
+  ((t.innerHTML = ""),
+    e.forEach((e) => {
+      const n = document.createElement("details");
+      (n.classList.add("skill-category"), t.appendChild(n));
+      const c = document.createElement("summary");
+      ((c.textContent = e.category),
+        c.classList.add("title"),
+        n.appendChild(c));
+      const d = document.createElement("div");
+      (d.classList.add("icone-grid"),
+        n.appendChild(d),
+        e.skills.forEach((e) => {
+          const t = document.createElement("a");
+          ((t.href = e.url),
+            (t.target = "_blank"),
+            (t.rel = "noopener noreferrer"));
+          const n = document.createElement("img");
+          ((n.src = e.icon), (n.alt = e.alt), t.appendChild(n));
+          const c = document.createElement("span");
+          ((c.textContent = e.name), t.appendChild(c), d.appendChild(t));
+        }));
+    }));
 }
-
-fetch("src/skills.json")
-  .then((response) => response.json())
-  .then((data) => {
-    renderSkills(data);
-  });
-
-// Rendu visuel de mon parcours
-
-function renderExperiences(experiences) {
-  const CoursesExperiences = document.getElementById("experiences");
-  CoursesExperiences.innerHTML = "";
-
-  experiences.forEach((exp) => {
-    const expCard = document.createElement("div");
-    expCard.classList.add("exp-card");
-    CoursesExperiences.appendChild(expCard);
-
-    const expPoste = document.createElement("h3");
-    expPoste.textContent = exp.poste;
-    expCard.appendChild(expPoste);
-
-    const expEntreprise = document.createElement("p");
-    expEntreprise.textContent = exp.entreprise;
-    expCard.appendChild(expEntreprise);
-
-    const expDates = document.createElement("p");
-    expDates.textContent = exp.dates;
-    expCard.appendChild(expDates);
-
-    const expDescription = document.createElement("ul");
-    exp.description.forEach((des) => {
-      const li = document.createElement("li");
-      li.textContent = des;
-      expDescription.appendChild(li);
-    });
-    expCard.appendChild(expDescription);
-    observer.observe(expCard);
-  });
+function renderExperiences(e) {
+  const t = document.getElementById("experiences");
+  ((t.innerHTML = ""),
+    e.forEach((e) => {
+      const n = document.createElement("div");
+      (n.classList.add("exp-card"), t.appendChild(n));
+      const c = document.createElement("h3");
+      ((c.textContent = e.poste), n.appendChild(c));
+      const d = document.createElement("p");
+      ((d.textContent = e.entreprise), n.appendChild(d));
+      const a = document.createElement("p");
+      ((a.textContent = e.dates), n.appendChild(a));
+      const o = document.createElement("ul");
+      (e.description.forEach((e) => {
+        const t = document.createElement("li");
+        ((t.textContent = e), o.appendChild(t));
+      }),
+        n.appendChild(o),
+        observer.observe(n));
+    }));
 }
-
-function renderDiplomes(diplomes) {
-  const CourseDiplomes = document.getElementById("diplomas");
-  CourseDiplomes.innerHTML = "";
-
-  diplomes.forEach((dip) => {
-    const dipCard = document.createElement("div");
-    dipCard.classList.add("dip-card");
-    CourseDiplomes.appendChild(dipCard);
-
-    const dipDiplomes = document.createElement("h3");
-    dipDiplomes.textContent = dip.diplome;
-    dipCard.appendChild(dipDiplomes);
-
-    const dipEtablissement = document.createElement("p");
-    dipEtablissement.textContent = dip.etablissement;
-    dipCard.appendChild(dipEtablissement);
-
-    const dipDates = document.createElement("p");
-    dipDates.textContent = dip.annee;
-    dipCard.appendChild(dipDates);
-    observer.observe(dipCard);
-  });
+function renderDiplomes(e) {
+  const t = document.getElementById("diplomas");
+  ((t.innerHTML = ""),
+    e.forEach((e) => {
+      const n = document.createElement("div");
+      (n.classList.add("dip-card"), t.appendChild(n));
+      const c = document.createElement("h3");
+      ((c.textContent = e.diplome), n.appendChild(c));
+      const d = document.createElement("p");
+      ((d.textContent = e.etablissement), n.appendChild(d));
+      const a = document.createElement("p");
+      ((a.textContent = e.annee), n.appendChild(a), observer.observe(n));
+    }));
 }
-
-fetch("src/courses.json")
-  .then((response) => response.json())
-  .then((data) => {
-    renderDiplomes(data.diplomes);
-    renderExperiences(data.experiences);
-  });
+(fetch("src/projects.json")
+  .then((e) => e.json())
+  .then((e) => {
+    (renderGallery(e), renderFilters(e));
+  }),
+  fetch("src/skills.json")
+    .then((e) => e.json())
+    .then((e) => {
+      renderSkills(e);
+    }),
+  fetch("src/courses.json")
+    .then((e) => e.json())
+    .then((e) => {
+      (renderDiplomes(e.diplomes), renderExperiences(e.experiences));
+    }));
